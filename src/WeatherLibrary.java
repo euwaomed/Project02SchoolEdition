@@ -13,12 +13,14 @@ public class WeatherLibrary
     public static double fahrenheitToCelsius(double degrees)
     {
         // your code
-        return -1;
+        double celcius = (5.0/9.0)*(degrees - 32.0);
+        return celcius;
     }
 
     public static double celsiusToFahrenheit(double degrees)
     {
         // your code
-        return -1;
+        double fahrenheit = (9.0/5.0)*degrees + 32.0;
+        return fahrenheit;
     }
 }

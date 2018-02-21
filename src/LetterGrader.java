@@ -6,8 +6,8 @@
  * If the grade is not in that range it is invalid.
  *
  *
- *  90 -> 100 : A
- *  80 ->  89 : B
+ *  90 -> 100 : A - 90 (inclusive) to 100 (inclusive)
+ *  80 ->  89 : B - 80 (inclusive) to 90 (exclusive)
  *  70 ->  79 : C
  *  65 ->  69 : D
  *   0 ->  64 : F
@@ -24,6 +24,23 @@ public class LetterGrader
     public static char grade2letter(double grade)
     {
         // your code
-        return 'Z';
+        if (grade > 100 || grade < 0) {
+            return 'X';
+        }
+        else if (grade >= 90) {
+            return 'A';
+        }
+        else if (grade >= 80) {
+            return 'B';
+        }
+        else if (grade >= 70) {
+            return 'C';
+        }
+        else if (grade >= 65) {
+            return 'D';
+        }
+        else {
+            return 'F';
+        }
     }
 }
