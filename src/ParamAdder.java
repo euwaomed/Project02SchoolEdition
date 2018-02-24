@@ -18,7 +18,7 @@
 //Date Completed: 2/20/2018
 // Group Members: Efosa Uwa-Omede & Francis Chang
 
-import java.util.Scanner;
+/* import java.util.Scanner;
 
 public class ParamAdder
 {
@@ -67,4 +67,17 @@ public class ParamAdder
 //http://chortle.ccsu.edu/java5/notes/chap23/ch23_6.html
 //http://chortle.ccsu.edu/java5/Notes/chap23/ch23_2.html
 //https://stackoverflow.com/questions/24940873/meaning-of-input-nextline
+ */
 
+public class ParamAdder {
+    public static void main(String[] args) {
+        // args = new String[] {"1", "3", "5", "-2", "4"};
+
+        int previousSum = 0;
+
+        for (int i = 0; i < args.length; i++) {
+            previousSum = Integer.parseInt(args[i]) + previousSum;
+        }
+        System.out.println(previousSum);
+    }
+}
